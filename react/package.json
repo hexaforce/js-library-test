@@ -7,7 +7,6 @@
     "@svgr/webpack": "4.1.0",
     "babel-core": "7.0.0-bridge.0",
     "babel-eslint": "9.x",
-    "babel-jest": "24.0.0",
     "babel-loader": "8.0.5",
     "babel-plugin-named-asset-import": "^0.3.0",
     "babel-preset-react-app": "^7.0.0",
@@ -27,9 +26,6 @@
     "fs-extra": "^7.0.1",
     "html-webpack-plugin": "4.0.0-alpha.2",
     "identity-obj-proxy": "3.0.0",
-    "jest": "24.0.0",
-    "jest-pnp-resolver": "1.0.2",
-    "jest-resolve": "24.0.0",
     "mini-css-extract-plugin": "0.5.0",
     "optimize-css-assets-webpack-plugin": "5.0.1",
     "pnp-webpack-plugin": "1.2.1",
@@ -46,12 +42,12 @@
     "style-loader": "0.23.1",
     "terser": "3.14.1",
     "terser-webpack-plugin": "^1.2.1",
+    "typescript": "*",
     "url-loader": "1.1.2",
     "webpack": "4.29.0",
     "webpack-dev-server": "3.1.14",
     "webpack-manifest-plugin": "2.0.4",
-    "workbox-webpack-plugin": "3.6.3",
-    "typescript": "*"
+    "workbox-webpack-plugin": "3.6.3"
   },
   "scripts": {
     "start": "node scripts/start.js",
@@ -109,10 +105,18 @@
   },
   "babel": {
     "presets": [
-      "react-app"
+      "react-app",
+      "@babel/preset-env",
+      "@babel/preset-react"
     ]
   },
   "devDependencies": {
+    "jest": "^24.0.0",
+    "jest-pnp-resolver": "1.0.2",
+    "jest-resolve": "^24.0.0",
+    "babel-jest": "^24.0.0",
+    "@babel/preset-env": "^7.3.1",
+    "@babel/preset-react": "^7.0.0",
     "@storybook/addon-actions": "^4.1.11",
     "@storybook/addon-links": "^4.1.11",
     "@storybook/addons": "^4.1.11",
@@ -122,6 +126,7 @@
     "eslint-plugin-import": "^2.16.0",
     "eslint-plugin-node": "^8.0.1",
     "eslint-plugin-promise": "^4.0.1",
-    "eslint-plugin-standard": "^4.0.0"
+    "eslint-plugin-standard": "^4.0.0",
+    "react-test-renderer": "^16.7.0"
   }
 }
